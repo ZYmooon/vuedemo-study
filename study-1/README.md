@@ -1,23 +1,24 @@
-#项目初始化
-  1、安装vue-cli
-    npm i -g vue-cli
-  2、初始化项目
-    vue init webpack my-project
-  3、进入该项目
-    cd my-project
-  4、安装依赖
-    yarn 
-    或者
-    npm install
-  5、启动项目
-    npm run dev
+# 项目初始化
 
-#项目目录结构
-  index.html：项目根视图
+  - 1、安装vue-cli
+    ``npm i -g vue-cli``
+-  2、初始化项目
+    ``vue init webpack my-project``
+ - 3、进入该项目
+    cd my-project
+ - 4、安装依赖
+    ``yarn ``
+    或者
+    ``npm install``
+  5、启动项目
+    ``npm run dev``
+
+####项目目录结构
+>  index.html：项目根视图
   .postcssrc.js :postcss配置文件
   static: 静态资源文件
 
-#项目文件解析 
+####项目文件解析 
   src=>App.vue是根组件
   src=>main.js是入口文件
 
@@ -47,29 +48,27 @@
               components: { App }, //
               template: "<App/>"  //
             });
-#语法模板
+# 语法模板
   Vue 组件：
     包含三个部分：
-      template:视图
+   >  template:视图
       script:逻辑
       style:样式
         注意: 当<style> 标签有 scoped 属性时，它的 CSS 只作用于当前组件中的元素。
 
-              你可以在一个组件中同时使用有作用域和无作用域的样式：
-              <style>
-              /* 全局样式 */
-              </style>
+    你可以在一个组件中同时使用有作用域和无作用域的样式：
+    <style>
+    /* 全局样式 */
+    </style>
+    <style scoped>
+    /* 本地样式 */
+    </style>
+    使用 scoped 后，父组件的样式将不会渗透到子组件中
 
-              <style scoped>
-              /* 本地样式 */
-              </style>
-
-              使用 scoped 后，父组件的样式将不会渗透到子组件中
-
-              如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 >>> 操作符：
-              <style scoped>
-              .a >>> .b { /* ... */ }
-              </style>
+    如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 >>> 操作符：
+    <style scoped>
+    .a >>> .b { /* ... */ }
+     </style>
 
   Mustache:模板
     表现形式：{{语法}}
@@ -116,12 +115,15 @@
 
   事件参数:
   事件修饰符:
+
       .stop
       .prevent
       .capture
       .self
       .once
+
   按键修饰符:
+
       .enter
       .tab
       .delete (捕获“删除”和“退格”键)
@@ -136,6 +138,7 @@
 
   数组更新检测:
       变异方法:引起视图更新;
+
           push()
           pop()
           shift()
