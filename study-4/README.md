@@ -1,11 +1,11 @@
-####这次在创建的时候,是没有router文件夹的,router文件夹和index.js文件是自己创建的
+#### 这次在创建的时候,是没有router文件夹的,router文件夹和index.js文件是自己创建的
 
- ####1.安装
+ #### 1.安装
   ``cnpm i vue-router -S``
- ####2.在main.js中引用
+ #### 2.在main.js中引用
   import router from "vue-router"
   Vue.use(router)
-####3.配置路由文件
+#### 3.配置路由文件
   import HelloWrold from "../components/HelloWorld";
   import Hellozhouyi from "../components/Helloezhouyi";
 
@@ -28,7 +28,7 @@
     router   //新添加的
   })
 
-####4新增src=>router文件夹,新增index.js文件
+#### 4新增src=>router文件夹,新增index.js文件
   - 1.import Vue from "vue";
     import VueRouter from "vue-router";
   - 2.var router = new VueRouter({
@@ -63,12 +63,12 @@
 
     这样我们就完成了路由的配置,和在init的时候,加载路由一个样子了
     
-####5.视图加载的位置
+#### 5.视图加载的位置
   在App.vue的根组件div中引入
     <router-view/>  //可以这么写
     //<router-view></router-view>  也可以这么写
 
-####6.跳转(导航)
+#### 6.跳转(导航)
   - A:<router-link to="/zhouyi">Helloezhouyi</router-link>
 
 - B:渲染成a标签效果 = <a href="#/zhouyi"></a>
