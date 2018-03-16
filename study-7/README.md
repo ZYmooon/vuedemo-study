@@ -25,7 +25,7 @@ build中配置了webpack的基本配置、开发环境配置、生产环境配�
 引用 Redux 的作者 Dan Abramov 的话说就是：
 Flux 架构就像眼镜：您自会知道什么时候需要它。
 
-##Vuex状态管理
+## Vuex状态管理
 
 view => (dispatch) Action =>(Commit) Mutations =>(Mutate) State => View
 注意:Action不是必需品.如果有异步操作才可能用到Action,否则可以不使用.
